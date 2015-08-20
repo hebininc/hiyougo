@@ -7,17 +7,30 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
+#import "LocationManager.h"
+@interface ViewController ()<LocationManagerDelegate>
+@property (nonatomic,strong)LocationManager *locationManager;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+     _locationManager = [LocationManager creatLocationManager];
+    _locationManager.delegate = self;
 }
+
+
+- (IBAction)locate:(id)sender {
+    [_locationManager startLocate];
+}
+-(void)locateResult:(NSString *)result withStatus:(LocateStatusEnum)status{
+    if (status == LocateEnumSuccess) {
+          NSLog(@"result %@",result);
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

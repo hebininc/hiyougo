@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FFC72CB0-5313-40CB-9F33-511C81CE3C39</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>test</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BB80A4F038ABCE7D795409053D076DAA98FC5228</key>
 		<string>github.com:hebininc/hiyougo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>test/test.xcodeproj/project.xcworkspace</string>
+	<string>test/test.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BB80A4F038ABCE7D795409053D076DAA98FC5228</key>

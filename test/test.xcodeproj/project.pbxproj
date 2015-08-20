@@ -14,6 +14,9 @@
 		8674301D1B857F3F00C87ED2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8674301C1B857F3F00C87ED2 /* Images.xcassets */; };
 		867430201B857F3F00C87ED2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8674301E1B857F3F00C87ED2 /* LaunchScreen.xib */; };
 		8674302C1B857F3F00C87ED2 /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8674302B1B857F3F00C87ED2 /* testTests.m */; };
+		867430361B85814700C87ED2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867430351B85814700C87ED2 /* CoreLocation.framework */; };
+		867430381B85814D00C87ED2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867430371B85814D00C87ED2 /* MapKit.framework */; };
+		8674303B1B85816400C87ED2 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8674303A1B85816400C87ED2 /* LocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		867430251B857F3F00C87ED2 /* testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8674302A1B857F3F00C87ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8674302B1B857F3F00C87ED2 /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
+		867430351B85814700C87ED2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		867430371B85814D00C87ED2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		867430391B85816400C87ED2 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		8674303A1B85816400C87ED2 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867430381B85814D00C87ED2 /* MapKit.framework in Frameworks */,
+				867430361B85814700C87ED2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		867430031B857F3F00C87ED2 = {
 			isa = PBXGroup;
 			children = (
+				867430371B85814D00C87ED2 /* MapKit.framework */,
+				867430351B85814700C87ED2 /* CoreLocation.framework */,
 				8674300E1B857F3F00C87ED2 /* test */,
 				867430281B857F3F00C87ED2 /* testTests */,
 				8674300D1B857F3F00C87ED2 /* Products */,
@@ -85,6 +96,8 @@
 				867430141B857F3F00C87ED2 /* AppDelegate.m */,
 				867430161B857F3F00C87ED2 /* ViewController.h */,
 				867430171B857F3F00C87ED2 /* ViewController.m */,
+				867430391B85816400C87ED2 /* LocationManager.h */,
+				8674303A1B85816400C87ED2 /* LocationManager.m */,
 				867430191B857F3F00C87ED2 /* Main.storyboard */,
 				8674301C1B857F3F00C87ED2 /* Images.xcassets */,
 				8674301E1B857F3F00C87ED2 /* LaunchScreen.xib */,
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8674303B1B85816400C87ED2 /* LocationManager.m in Sources */,
 				867430181B857F3F00C87ED2 /* ViewController.m in Sources */,
 				867430151B857F3F00C87ED2 /* AppDelegate.m in Sources */,
 				867430121B857F3F00C87ED2 /* main.m in Sources */,
@@ -349,9 +363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yu Zhang (M3886PAWX7)";
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "349a067e-8730-4707-b165-1955f2b60e1f";
 			};
 			name = Debug;
 		};
@@ -362,6 +378,7 @@
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "349a067e-8730-4707-b165-1955f2b60e1f";
 			};
 			name = Release;
 		};
@@ -418,6 +435,7 @@
 				867430311B857F3F00C87ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		867430321B857F3F00C87ED2 /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +444,7 @@
 				867430341B857F3F00C87ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
